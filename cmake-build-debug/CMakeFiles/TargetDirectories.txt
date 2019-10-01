@@ -1,0 +1,3 @@
+/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles/balanceball-master.dir
+/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles/edit_cache.dir
