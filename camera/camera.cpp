@@ -75,9 +75,12 @@ void Camera::atualiza(){       int ret = 0;
 
         /* função imshow , serve para mostrar as imagens, no caso a imagem real e a imagem binarizada.
          */
+
+        cv::namedWindow("imagem binarizada",cv::WINDOW_KEEPRATIO); //REDIMENCIONAMENTO
         cv::imshow("imagem binarizada", imagemBinarizada ); // Mostrando a imagem "binarizada"
 
         image = image + imgSquare_;
+        cv::namedWindow("Original",cv::WINDOW_KEEPRATIO); //REDIMENCIONAMENTO
         cv::imshow("Original", image ); // Mostrando a imagem original
 
         imgSquare_ = cv::Mat::zeros( imgSquare_.size(), CV_8UC3 ); // Clearing the imgSquare_

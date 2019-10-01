@@ -4,6 +4,7 @@
 #include <string>
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
+
  // classe Camera // setando os (des)construtores, setan
 class Camera
 {

@@ -6,25 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/assert/Downloads/archivesPrograms/balanceball-master/balanceball.cpp
-./camera/camera.hpp
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.hpp
-iostream
--
-cmath
--
-
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.cpp
+/home/assert-latomia/BallAndPlate/camera/camera.cpp
 camera.hpp
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.hpp
+/home/assert-latomia/BallAndPlate/camera/camera.hpp
 
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.hpp
+/home/assert-latomia/BallAndPlate/camera/camera.hpp
 string
 -
 opencv2/highgui/highgui.hpp
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/opencv2/highgui/highgui.hpp
+/home/assert-latomia/BallAndPlate/camera/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/assert/Downloads/archivesPrograms/balanceball-master/camera/opencv2/imgproc/imgproc.hpp
+/home/assert-latomia/BallAndPlate/camera/opencv2/imgproc/imgproc.hpp
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

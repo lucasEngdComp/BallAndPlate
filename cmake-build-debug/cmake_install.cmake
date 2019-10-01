@@ -1,4 +1,4 @@
-# Install script for directory: /home/assert/Downloads/archivesPrograms/balanceball-master
+# Install script for directory: /home/assert-latomia/BallAndPlate
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/assert-latomia/BallAndPlate/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

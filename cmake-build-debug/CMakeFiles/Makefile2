@@ -35,19 +35,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/assert/Downloads/Instaladores/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/assert-latomia/Downloads/clion-2019.2.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/assert/Downloads/Instaladores/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/assert-latomia/Downloads/clion-2019.2.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/assert/Downloads/archivesPrograms/balanceball-master
+CMAKE_SOURCE_DIR = /home/assert-latomia/BallAndPlate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug
+CMAKE_BINARY_DIR = /home/assert-latomia/BallAndPlate/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ preinstall:
 CMakeFiles/balanceball-master.dir/all:
 	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/depend
 	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target balanceball-master"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/assert-latomia/BallAndPlate/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target balanceball-master"
 .PHONY : CMakeFiles/balanceball-master.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/balanceball-master.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/assert-latomia/BallAndPlate/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/balanceball-master.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/assert-latomia/BallAndPlate/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/balanceball-master.dir/rule
 
 # Convenience name for target.

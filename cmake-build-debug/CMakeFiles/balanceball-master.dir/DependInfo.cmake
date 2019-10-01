@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/assert/Downloads/archivesPrograms/balanceball-master/balanceball.cpp" "/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o"
-  "/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.cpp" "/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o"
+  "/home/assert-latomia/BallAndPlate/balanceball.cpp" "/home/assert-latomia/BallAndPlate/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o"
+  "/home/assert-latomia/BallAndPlate/camera/camera.cpp" "/home/assert-latomia/BallAndPlate/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

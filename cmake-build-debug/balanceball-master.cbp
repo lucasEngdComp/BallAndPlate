@@ -5,36 +5,36 @@
 		<Option title="balanceball-master"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\opencv4\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug"/>
+				<Option working_dir="/home/assert-latomia/BallAndPlate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug"/>
+				<Option working_dir="/home/assert-latomia/BallAndPlate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="balanceball-master">
-				<Option output="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/balanceball-master" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug"/>
+				<Option output="/home/assert-latomia/BallAndPlate/cmake-build-debug/balanceball-master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/assert-latomia/BallAndPlate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/assert/Downloads/archivesPrograms/balanceball-master/."/>
+					<Add directory="/home/assert-latomia/BallAndPlate/."/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -46,20 +46,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 balanceball-master"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 balanceball-master"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="balanceball-master/fast">
-				<Option output="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/balanceball-master" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug"/>
+				<Option output="/home/assert-latomia/BallAndPlate/cmake-build-debug/balanceball-master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/assert-latomia/BallAndPlate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/assert/Downloads/archivesPrograms/balanceball-master/."/>
+					<Add directory="/home/assert-latomia/BallAndPlate/."/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -71,46 +71,46 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 balanceball-master/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 balanceball-master/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug"/>
+				<Option working_dir="/home/assert-latomia/BallAndPlate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert/Downloads/archivesPrograms/balanceball-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/assert-latomia/BallAndPlate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/balanceball.cpp">
+		<Unit filename="/home/assert-latomia/BallAndPlate/balanceball.cpp">
 			<Option target="balanceball-master"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.cpp">
+		<Unit filename="/home/assert-latomia/BallAndPlate/camera/camera.cpp">
 			<Option target="balanceball-master"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/camera/camera.hpp">
+		<Unit filename="/home/assert-latomia/BallAndPlate/camera/camera.hpp">
 			<Option target="balanceball-master"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/CMakeLists.txt">
+		<Unit filename="/home/assert-latomia/BallAndPlate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/assert-latomia/BallAndPlate/../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/assert-latomia/BallAndPlate/../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/assert-latomia/BallAndPlate/../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/assert/Downloads/archivesPrograms/balanceball-master/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/assert-latomia/BallAndPlate/../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

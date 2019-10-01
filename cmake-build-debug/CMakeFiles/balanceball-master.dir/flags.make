@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/assert/Downloads/archivesPrograms/balanceball-master/. -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/home/assert-latomia/BallAndPlate/. -isystem /usr/local/include/opencv4 
 
