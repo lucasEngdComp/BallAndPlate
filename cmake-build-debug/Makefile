@@ -123,6 +123,33 @@ balanceball-master/fast:
 	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/build
 .PHONY : balanceball-master/fast
 
+ConecxaoSerial/ConexaoSerial.o: ConecxaoSerial/ConexaoSerial.cpp.o
+
+.PHONY : ConecxaoSerial/ConexaoSerial.o
+
+# target to build an object file
+ConecxaoSerial/ConexaoSerial.cpp.o:
+	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o
+.PHONY : ConecxaoSerial/ConexaoSerial.cpp.o
+
+ConecxaoSerial/ConexaoSerial.i: ConecxaoSerial/ConexaoSerial.cpp.i
+
+.PHONY : ConecxaoSerial/ConexaoSerial.i
+
+# target to preprocess a source file
+ConecxaoSerial/ConexaoSerial.cpp.i:
+	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.i
+.PHONY : ConecxaoSerial/ConexaoSerial.cpp.i
+
+ConecxaoSerial/ConexaoSerial.s: ConecxaoSerial/ConexaoSerial.cpp.s
+
+.PHONY : ConecxaoSerial/ConexaoSerial.s
+
+# target to generate assembly for a file
+ConecxaoSerial/ConexaoSerial.cpp.s:
+	$(MAKE) -f CMakeFiles/balanceball-master.dir/build.make CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.s
+.PHONY : ConecxaoSerial/ConexaoSerial.cpp.s
+
 balanceball.o: balanceball.cpp.o
 
 .PHONY : balanceball.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... balanceball-master"
 	@echo "... edit_cache"
+	@echo "... ConecxaoSerial/ConexaoSerial.o"
+	@echo "... ConecxaoSerial/ConexaoSerial.i"
+	@echo "... ConecxaoSerial/ConexaoSerial.s"
 	@echo "... balanceball.o"
 	@echo "... balanceball.i"
 	@echo "... balanceball.s"

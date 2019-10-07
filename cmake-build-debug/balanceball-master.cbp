@@ -34,7 +34,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/assert-latomia/BallAndPlate/."/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -59,7 +58,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/assert-latomia/BallAndPlate/."/>
 					<Add directory="/usr/local/include/opencv4"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
@@ -88,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/assert-latomia/BallAndPlate/ConecxaoSerial/ConexaoSerial.cpp">
+			<Option target="balanceball-master"/>
+		</Unit>
+		<Unit filename="/home/assert-latomia/BallAndPlate/ConecxaoSerial/ConexaoSerial.hpp">
+			<Option target="balanceball-master"/>
+		</Unit>
 		<Unit filename="/home/assert-latomia/BallAndPlate/balanceball.cpp">
 			<Option target="balanceball-master"/>
 		</Unit>

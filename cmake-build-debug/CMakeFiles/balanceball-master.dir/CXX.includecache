@@ -6,9 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/assert-latomia/BallAndPlate/camera/camera.cpp
-camera.hpp
+/home/assert-latomia/BallAndPlate/ConecxaoSerial/ConexaoSerial.hpp
+string
+-
+
+/home/assert-latomia/BallAndPlate/balanceball.cpp
+./camera/camera.hpp
 /home/assert-latomia/BallAndPlate/camera/camera.hpp
+ConecxaoSerial/ConexaoSerial.hpp
+/home/assert-latomia/BallAndPlate/ConecxaoSerial/ConexaoSerial.hpp
+iostream
+-
+opencv2/core.hpp
+-
+opencv2/videoio.hpp
+-
+opencv2/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
 
 /home/assert-latomia/BallAndPlate/camera/camera.hpp
 string

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o"
   "CMakeFiles/balanceball-master.dir/balanceball.cpp.o"
   "CMakeFiles/balanceball-master.dir/camera/camera.cpp.o"
   "balanceball-master"

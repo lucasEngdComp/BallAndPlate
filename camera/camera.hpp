@@ -5,6 +5,7 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
+
  // classe Camera // setando os (des)construtores, setan
 class Camera
 {
@@ -48,7 +49,7 @@ private:
         cv::VideoCapture camera_;       // Inicializador da camera
 
         cv::Mat image;                     // novo frame
-        cv::Mat imagemHSV;                // bgr -> converter para HSV
+        cv::Mat imagemHSV;                // bgr -> converter para HSVq
         cv::Mat imagemBinarizada;        // Thresholded HSV image
         cv::Mat imgSquare_;             // circulo num quadrado
 
