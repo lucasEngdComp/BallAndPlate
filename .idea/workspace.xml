@@ -13,7 +13,15 @@
   <component name="ChangeListManager">
     <list default="true" id="badf3e22-a0ea-4908-81f8-03013f3f9e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/balanceball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/balanceball.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera/camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera/camera.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/balanceball-master" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/balanceball-master" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +41,7 @@
   <component name="ProjectId" id="1Rc5SHklejWR7r8XCul0wDqWUpj" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Área de Trabalho/Ranzeus/balanceball" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,7 +82,19 @@
       <workItem from="1570558500857" duration="449000" />
       <workItem from="1570725141478" duration="112000" />
       <workItem from="1570725269612" duration="518000" />
-      <workItem from="1570725804479" duration="4758000" />
+      <workItem from="1570725804479" duration="9908000" />
+      <workItem from="1571071395617" duration="599000" />
+      <workItem from="1571162487145" duration="2437000" />
+      <workItem from="1571259889372" duration="662000" />
+      <workItem from="1571409716081" duration="898000" />
+      <workItem from="1571410626767" duration="4847000" />
+      <workItem from="1571669746404" duration="6300000" />
+      <workItem from="1571751989183" duration="3447000" />
+      <workItem from="1571777003667" duration="3873000" />
+      <workItem from="1571832347835" duration="13865000" />
+      <workItem from="1571919100411" duration="836000" />
+      <workItem from="1572012133396" duration="18219000" />
+      <workItem from="1572347188815" duration="1933000" />
     </task>
     <servers />
   </component>
@@ -95,14 +115,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/balanceball.cpp</url>
-          <line>57</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="terminalOptions.c_ospeed" />
+        <watch expression="terminalOptions.c_ospeed" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

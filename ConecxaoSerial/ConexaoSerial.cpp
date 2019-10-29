@@ -1,99 +1,84 @@
 //
 // Created by assert-latomia on 03/10/2019.
 //
-
+#define _GNU_SOURCE
 #include "ConexaoSerial.hpp"
-
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>    // POSIX terminal control definitions
 #include <sys/ioctl.h>
 #include <cstring>
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 // Constructors
-
-Platform::Platform() :  platformFD_(0),
-
-                        angleServoX_(0),
-                        angleServoY_(0),
-
-                        fail_(false),
-                        errorString_("")
-{
+Serial::Serial() :  fileDescriptor(0),X_(0),Y_(0),fail_(false),errorString_(""){
 
 }
 
-
-
-Platform::Platform( const char* devicePath, int baudRate ) :  angleServoX_(0),
-                                                              angleServoY_(0),
-
-                                                              fail_(false),
-                                                              errorString_("")
-{
-    platformFD_ = this->initConnection( devicePath, baudRate );
+Serial::Serial( const char* dispositivo, int baudRate ) : X_(0),Y_(0),fail_(false),errorString_(""){
+    fileDescriptor = this->initConnection( dispositivo, baudRate );
 }
 
 // Desctructor
-Platform::~Platform()
-{
-    int ret = 0;
+Serial::~Serial(){
 
-    ret = close( platformFD_ );
+    int ret = 0;
+    ret = close( fileDescriptor );
     if (ret == -1)
     {
         this->setFail();
         this->setErrorStr( "Failed to close connection with device. " + (std::string)strerror(errno) );
     }
 
-    platformFD_ = -1;
-
-    angleServoX_ = -1;
-    angleServoY_ = -1;
-
+    fileDescriptor = -1;
+    X_ = -1;
+    Y_ = -1;
     fail_ = true;
     errorString_ = "";
 }
 
-void
-Platform::setAngles( int angleX, int angleY )
-{
-    angleServoX_ = angleX;
-    angleServoY_ = angleY;
-
-    std::string angleX_str = std::to_string( angleX );
-    std::string angleY_str = std::to_string( angleY );
-
-    std::string signal = angleX_str + ":" + angleY_str;
-    signal[signal.length()] = '$';
+void Serial::setRadius(int v,int f){
 
     int ret = 0;
-
-    ret = write(platformFD_, signal.c_str(), signal.length() + 1);
-    if (ret == -1)
-    {
+    int rett = 0;
+    ret = write(fileDescriptor, &v, 2);
+    rett = write (fileDescriptor,&f,2);
+    if (ret && rett == -1 ){
         this->setFail();
-        this->setErrorStr( "Failed to write to device. " + (std::string)strerror(errno) );
-
+        this->setErrorStr( " falha ao escrever " + (std::string)strerror(errno) );
         return;
     }
 }
 
 
-int
-Platform::initConnection( const char* devicePath, int baudRate )
-{
+int Serial::initConnection( const char* dispositivo, int baudRate ){
+
     int fd = 0;
     int ret = 0;
 
     struct termios terminalOptions;         // POSIX structure for configurating terminal devices
 
-    fd = open( devicePath, O_WRONLY | O_NDELAY | O_NOCTTY );
-    if (fd == -1)
-    {
+    //terminalOptions.c_cflag = CIBAUD;
+
+    //terminalOptions.c_cflag = CLOCAL;       // If CLOCAL is set, the line behaves as if DCD is always asserted.
+
+    terminalOptions.c_cflag |= CBAUD;
+
+    terminalOptions.c_cflag |= CS8;         // Character size mask
+
+    terminalOptions.c_cc[VMIN] = 0;         // 1 second timeout
+
+    terminalOptions.c_cc[VTIME] = 10;       //
+
+
+    fd = open( dispositivo, O_WRONLY | O_NDELAY | O_NOCTTY );
+    if (fd == -1){
         this->setFail();
-        this->setErrorStr( "Failed to open: " + (std::string)devicePath + ". " + (std::string)strerror(errno) );
+        this->setErrorStr( "Falha ao abrir: " + (std::string)dispositivo + ". " + (std::string)strerror(errno) );
 
         return -1;
     }
@@ -101,21 +86,18 @@ Platform::initConnection( const char* devicePath, int baudRate )
     memset( &terminalOptions, 0, sizeof( struct termios ) );        // Cleaning up the structure
     cfmakeraw(&terminalOptions);                                    //
 
-    cfsetspeed(&terminalOptions, baudRate);
+    //speed_t speed = 57600;
 
-    terminalOptions.c_cflag = CLOCAL;       // If CLOCAL is set, the line behaves as if DCD is always asserted.
-    // It is used when your device is local
+    tcsetattr(fileDescriptor,TCSANOW,&terminalOptions);
+    cout<< tcgetattr(fileDescriptor,&terminalOptions)<<endl;
 
-    terminalOptions.c_cflag |= CS8;         // Character size mask
-
-    terminalOptions.c_cc[VMIN] = 0;         // 1 second timeout
-    terminalOptions.c_cc[VTIME] = 10;       //
+    cfsetspeed(&terminalOptions, 1);
+    cout<< "boudrate: " << cfgetospeed(&terminalOptions) << endl;
 
     ret = ioctl( fd, TIOCSETD, &terminalOptions );  // Configuring the device
-    if (ret == -1)
-    {
+    if (ret == -1){
         this->setFail();
-        this->setErrorStr( "Failed to failed to configure device: " + (std::string)devicePath + ". " + (std::string)strerror(errno) );
+        this->setErrorStr( "Failed to failed to configure device: " + (std::string)dispositivo + ". " + (std::string)strerror(errno) );
 
         return -1;
     }
@@ -123,26 +105,18 @@ Platform::initConnection( const char* devicePath, int baudRate )
     return fd;
 }
 
-void
-Platform::setFail()
-{
+void Serial::setFail(){
     fail_ = true;
 }
 
-bool
-Platform::fail()
-{
+bool Serial::fail(){
     return fail_;
 }
 
-void
-Platform::setErrorStr(std::string errorString)
-{
+void Serial::setErrorStr(std::string errorString){
     errorString_ = errorString;
 }
 
-std::string
-Platform::getErrorStr()
-{
+std::string Serial::getErrorStr(){
     return errorString_;
 }

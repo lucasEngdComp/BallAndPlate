@@ -11,6 +11,7 @@
 
 #define REFRESH_PERIOD  5      // In milliseconds
 #define ESC_SC          27     // ESC scan code
+#define BAUD_RATE 250000
 
 #define NORMAL          0
 #define SQUARE          1
@@ -29,13 +30,13 @@ int main(int argc, char* argv[])
     int64 t0 = cv::getTickCount();
     int64 processingTime = 0;
 
-    Platform platform( "/dev/ttyUSB0", 9600 );
+    Serial serial("/dev/ttyUSB0", BAUD_RATE );
     Camera camera;
 
     if ( camera.fail() )
     {
-            cerr << camera.getErrorStr() << endl;
-            exit( EXIT_FAILURE );
+        cerr << camera.getErrorStr() << endl;
+        exit( EXIT_FAILURE );
     }
     switch( mode )
     {
@@ -55,25 +56,28 @@ int main(int argc, char* argv[])
                 x = camera.getX();
                 y = camera.getY();
 
-                platform.setAngles(x,y); // escreve dois inteiros na serial
+                serial.setRadius(1, 1); // escreve dois inteiros na serial
 
-//                cout << "X: " << x << endl;
-//                cout << "Y: " << y << endl;
-//                cout << endl;
-//                nFrames++;
-//                if (nFrames % 10 == 0){
-//                    const int N = 10;
-//                    int64 t1 = cv::getTickCount();
-//                    cout << "Frames captured: " << cv::format("%5lld", (long long int)nFrames)
-//                         << "    Average FPS: " << cv::format("%9.1f", (double)getTickFrequency() * N / (t1 - t0))
-//                         << "    Average time per frame: " << cv::format("%9.2f ms", (double)(t1 - t0) * 1000.0f / (N * getTickFrequency()))
-//                         << "    Average processing time: " << cv::format("%9.2f ms", (double)(processingTime) * 1000.0f / (N * getTickFrequency()))
-//                         << std::endl;
-//                    t0 = t1;
-//                }
+
+                //imprime as configurações da camera
+//
+                nFrames++;
+                if (nFrames % 10 == 0){
+                    const int N = 10;
+                    int64 t1 = cv::getTickCount();
+                    cout << "Frames captured: " << cv::format("%5lld", (long long int)nFrames) << endl
+                         << "Average FPS: " << cv::format("%9.1f", (double)getTickFrequency() * N / (t1 - t0)) << endl
+                         << "Average time per frame: " << cv::format("%9.2f ms", (double)(t1 - t0) * 1000.0f / (N * getTickFrequency()))<< endl
+                         << "Average processing time: " << cv::format("%9.2f ms", (double)(processingTime) * 1000.0f / (N * getTickFrequency()))<< endl
+                         << "X: " << x << endl
+                         << "Y: " << y << endl
+                         << std::endl;
+
+                    t0 = t1;
+                }
             }
-                break;
-            }
+            break;
+        }
     }
     exit( EXIT_SUCCESS );
 

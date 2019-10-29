@@ -5,32 +5,33 @@
 #include <string>
 
 #ifndef BALANCEBALL_MASTER_CONEXAOSERIAL_H
-#define BALANCEBALL_MASTER_CONEXAOSERIAL_H
 
-class Platform
+
+class Serial
 {
 
 public:
-    Platform();
-    Platform( const char* devicePath, int baudRate );
+    Serial();
+    Serial( const char* dispositivo, int baudRate );
 
-    ~Platform();
-
-    void setAngles( int angleX, int angleY );
+    ~Serial();
+    int initConnection( const char* dispositivo, int baudRate );     // Takes path to the device file and returns fd of it
+    void setBaudrate(int fd,int baudrate);
+    void setRadius( int v, int f);
 
     bool fail();
     std::string getErrorStr();
 
 private:
-    int initConnection( const char* devicePath, int baudRate );     // Takes path to the device file and returns fd of it
+
 
     void setFail();
     void setErrorStr( std::string errorString );
 
-    int platformFD_;                // Platform's file descriptor
+    int fileDescriptor;                // Platform's file descriptor
 
-    int angleServoX_;               // Current ServoX's angle (-100 : 100)
-    int angleServoY_;               // Current ServoY's angle (-100 : 100)
+    int X_;               // Current ServoX's angle (-100 : 100)
+    int Y_;               // Current ServoY's angle (-100 : 100)
 
     bool fail_;                     // True on fail
     std::string errorString_;       // If fail_ is true, here is a valid reason of the error

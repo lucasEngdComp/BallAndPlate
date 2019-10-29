@@ -38,7 +38,6 @@ public:
         static const int ballArea_    = 300000;  // área aproximada da bola ( medida real da bola )
         static const int ballRadius_  = 36;      // tamanho que o quadrado irá fazer na bola.
 
-
 private:
         void setFail(); // METODO PARA VERIFICAÇÃO DE LEITURA DE CAMERA
         void setErrorStr( std::string errorString ); //  SETAR O ERRO, CASO HAJA UM.
