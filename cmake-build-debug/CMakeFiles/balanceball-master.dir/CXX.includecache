@@ -17,8 +17,6 @@ errno.h
 -
 termios.h
 -
-sys/ioctl.h
--
 cstring
 -
 iostream

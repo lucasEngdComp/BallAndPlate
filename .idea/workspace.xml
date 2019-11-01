@@ -14,14 +14,9 @@
     <list default="true" id="badf3e22-a0ea-4908-81f8-03013f3f9e84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConecxaoSerial/ConexaoSerial.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/balanceball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/balanceball.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera/camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera/camera.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/ConecxaoSerial/ConexaoSerial.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/balanceball.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/balanceball-master.dir/camera/camera.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/balanceball-master" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/balanceball-master" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +36,7 @@
   <component name="ProjectId" id="1Rc5SHklejWR7r8XCul0wDqWUpj" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Área de Trabalho/Ranzeus/balanceball" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CLionProjects/Serial" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,7 +89,14 @@
       <workItem from="1571832347835" duration="13865000" />
       <workItem from="1571919100411" duration="836000" />
       <workItem from="1572012133396" duration="18219000" />
-      <workItem from="1572347188815" duration="1933000" />
+      <workItem from="1572347188815" duration="8182000" />
+      <workItem from="1572368364999" duration="1366000" />
+      <workItem from="1572539235104" duration="16000" />
+      <workItem from="1572539268138" duration="1240000" />
+      <workItem from="1572549049783" duration="1101000" />
+      <workItem from="1572550346485" duration="3001000" />
+      <workItem from="1572557189850" duration="2410000" />
+      <workItem from="1572642537107" duration="345000" />
     </task>
     <servers />
   </component>

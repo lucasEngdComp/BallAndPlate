@@ -1,13 +1,13 @@
 //
 // Created by assert-latomia on 03/10/2019.
 //
-#define _GNU_SOURCE
+//#define _GNU_SOURCE
 #include "ConexaoSerial.hpp"
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>    // POSIX terminal control definitions
-#include <sys/ioctl.h>
+//#include <sys/ioctl.h>
 #include <cstring>
 #include <iostream>
 
@@ -15,10 +15,6 @@ using std::cout;
 using std::endl;
 
 // Constructors
-Serial::Serial() :  fileDescriptor(0),X_(0),Y_(0),fail_(false),errorString_(""){
-
-}
-
 Serial::Serial( const char* dispositivo, int baudRate ) : X_(0),Y_(0),fail_(false),errorString_(""){
     fileDescriptor = this->initConnection( dispositivo, baudRate );
 }
@@ -57,49 +53,64 @@ void Serial::setRadius(int v,int f){
 
 int Serial::initConnection( const char* dispositivo, int baudRate ){
 
+
     int fd = 0;
     int ret = 0;
 
-    struct termios terminalOptions;         // POSIX structure for configurating terminal devices
+    fd = open(dispositivo, O_RDWR | O_NOCTTY | O_NDELAY);
 
-    //terminalOptions.c_cflag = CIBAUD;
-
-    //terminalOptions.c_cflag = CLOCAL;       // If CLOCAL is set, the line behaves as if DCD is always asserted.
-
-    terminalOptions.c_cflag |= CBAUD;
-
-    terminalOptions.c_cflag |= CS8;         // Character size mask
-
-    terminalOptions.c_cc[VMIN] = 0;         // 1 second timeout
-
-    terminalOptions.c_cc[VTIME] = 10;       //
-
-
-    fd = open( dispositivo, O_WRONLY | O_NDELAY | O_NOCTTY );
-    if (fd == -1){
-        this->setFail();
-        this->setErrorStr( "Falha ao abrir: " + (std::string)dispositivo + ". " + (std::string)strerror(errno) );
-
-        return -1;
+    if(fd == -1) {
+        printf( "failed to open port\n" );
     }
 
-    memset( &terminalOptions, 0, sizeof( struct termios ) );        // Cleaning up the structure
-    cfmakeraw(&terminalOptions);                                    //
+    struct termios terminalOptions;
 
-    //speed_t speed = 57600;
+    if(!isatty(fd)) {
 
-    tcsetattr(fileDescriptor,TCSANOW,&terminalOptions);
-    cout<< tcgetattr(fileDescriptor,&terminalOptions)<<endl;
+        cout << "ERRO NO DISPOSITIVO CONECTADO"<< endl ;
 
-    cfsetspeed(&terminalOptions, 1);
-    cout<< "boudrate: " << cfgetospeed(&terminalOptions) << endl;
+    }
 
-    ret = ioctl( fd, TIOCSETD, &terminalOptions );  // Configuring the device
-    if (ret == -1){
-        this->setFail();
-        this->setErrorStr( "Failed to failed to configure device: " + (std::string)dispositivo + ". " + (std::string)strerror(errno) );
+    if(tcgetattr(fd, &terminalOptions) < 0){
+        cout << "ERRO NA CONFG ATUAL DA SERIAL"<< endl ;
+    }
 
-        return -1;
+    terminalOptions.c_iflag &= ~(IGNBRK | BRKINT | ICRNL | INLCR | PARMRK | INPCK | ISTRIP | IXON);
+
+    terminalOptions.c_oflag &= ~(OCRNL | ONLCR | ONLRET | ONOCR | OFILL | OLCUC | OPOST);
+
+    terminalOptions.c_lflag &= ~(ECHO | ECHONL | ICANON | IEXTEN | ISIG);
+
+    terminalOptions.c_cflag &= ~(CSIZE | PARENB);
+
+    terminalOptions.c_cflag |= CS8;
+
+//    terminalOptions.c_cc[VMIN] = 0;         // 1 second timeout
+//
+//    terminalOptions.c_cc[VTIME] = 10;       //
+
+//    if(cfsetispeed(&terminalOptions, B500000) < 0 || cfsetospeed(&terminalOptions, B500000) < 0) {
+//        cout << "FALHA AO SETAR OS BAUDRATES" << endl;
+//    }
+
+    if(cfsetospeed(&terminalOptions, B500000) < 0) {
+        cout << "FALHA AO SETAR OS BAUDRATES" << endl;
+    }
+
+    if(tcsetattr(fd, TCSAFLUSH, &terminalOptions) < 0) {
+        cout << "FALHA- AO SETAR AO APLICAR AS CONFIGURAÇÕES" << endl;
+    }
+
+    if(tcgetattr(STDOUT_FILENO, &terminalOptions) < 0)
+    {
+        perror("stdin");
+        return EXIT_FAILURE;
+    }
+
+    if(tcgetattr(STDOUT_FILENO, &terminalOptions) < 0)
+    {
+        perror("stdin");
+        return EXIT_FAILURE;
     }
 
     return fd;

@@ -11,7 +11,7 @@
 
 #define REFRESH_PERIOD  5      // In milliseconds
 #define ESC_SC          27     // ESC scan code
-#define BAUD_RATE 250000
+#define BAUD_RATE  250000
 
 #define NORMAL          0
 #define SQUARE          1
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
                 x = camera.getX();
                 y = camera.getY();
 
-                serial.setRadius(1, 1); // escreve dois inteiros na serial
+                serial.setRadius(x, y); // escreve dois inteiros na serial
 
 
                 //imprime as configurações da camera
